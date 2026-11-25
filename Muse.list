@@ -1,0 +1,20 @@
+# Muse.list — Muse 智能体 Loon 分流规则
+# 仓库：https://github.com/dayideal/loonScript
+# 远程引用（加到 Loon 配置 [Rule] 中）：
+#   RULE-SET,https://raw.githubusercontent.com/dayideal/loonScript/main/Muse.list,PROXY
+#   把 PROXY 换成你的代理策略组名
+#
+# 域名说明：
+#   muse.ai — Muse 官网、App 与 API
+#   agent.meta.ai — Muse 账号授权与连接端点
+#   ecto1usercontent.com / meta-agents-apps.workers.dev / metaaiusercontent.com
+#     — Muse App、API 与内容托管（第三方公开资料；Meta 未发布官方域名清单，
+#       如遇 App 内个别功能仍直连，可再补充）
+#   注意：meta.ai 是 Meta AI 的域名，Muse 是独立产品，未列入本规则；
+#   如需一并代理，可自行添加 DOMAIN-SUFFIX,meta.ai
+
+DOMAIN-SUFFIX,muse.ai
+DOMAIN-SUFFIX,agent.meta.ai
+DOMAIN-SUFFIX,ecto1usercontent.com
+DOMAIN-SUFFIX,meta-agents-apps.workers.dev
+DOMAIN-SUFFIX,metaaiusercontent.com
