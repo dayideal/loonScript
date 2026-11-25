@@ -7,14 +7,17 @@
 # 域名说明：
 #   muse.ai — Muse 官网、App 与 API
 #   agent.meta.ai — Muse 账号授权与连接端点
+#   meta.ai — Meta AI 网站与 App；Muse Spark 同时驱动 meta.ai 的助手体验
+#     （DOMAIN-SUFFIX,meta.ai 也覆盖 hatch.meta.ai）
+#   metaaivm.com — Muse 云端虚拟机（hatch.metaaivm.com），证书与 DNS 均属 Meta Platforms
 #   ecto1usercontent.com / meta-agents-apps.workers.dev / metaaiusercontent.com
 #     — Muse App、API 与内容托管（第三方公开资料；Meta 未发布官方域名清单，
 #       如遇 App 内个别功能仍直连，可再补充）
-#   注意：meta.ai 是 Meta AI 的域名，Muse 是独立产品，未列入本规则；
-#   如需一并代理，可自行添加 DOMAIN-SUFFIX,meta.ai
 
 DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,agent.meta.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metaaivm.com
 DOMAIN-SUFFIX,ecto1usercontent.com
 DOMAIN-SUFFIX,meta-agents-apps.workers.dev
 DOMAIN-SUFFIX,metaaiusercontent.com
