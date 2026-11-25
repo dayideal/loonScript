@@ -1,0 +1,25 @@
+#!name=银行跳过代理
+#!desc=中国大陆银行 App 跳过代理检测：平安、工商、建设、农业、中国、交通、邮储、招商、中信等 40+ 家银行及银联云闪付，域名直连
+
+# 银行 App 域名跳过代理（Loon 插件）
+# 安装：在 Loon「配置」→「插件」中添加本插件的 raw 链接
+# https://raw.githubusercontent.com/dayideal/loonScript/main/bank-skip-proxy.plugin
+#
+# 机制（Loon 官方文档）：
+#   skip-proxy：HTTP 代理模式下跳过代理
+#   bypass-tun：TUN（VPN）模式下绕过隧道直连；iOS 上 Loon 以 VPN 方式运行，银行类 App 检测代理时主要靠这一项
+#   两项均与主配置和其他插件的条目合并追加、去重，与仓库现有的 skip-proxy.plugin 不冲突
+#
+# 覆盖范围（46 个主域名，均已核验归属；每个主域名同时列出裸域名与 *.通配符）：
+#   平安：pingan.com、pingan.com.cn、pingan.cn、pa18.com、yqb.com、1qianbao.com、jk.cn、ocft.com、lu.com、pajkb.com、palubao.com、pingan.com.hk
+#   国有大行：icbc.com.cn、ccb.com、abchina.com.cn、boc.cn、bankofchina.com、bankcomm.com、psbc.com
+#   股份制：cmbchina.com、ecitic.com、cib.com.cn、spdb.com.cn、cmbc.com.cn、cebbank.com、hxb.com.cn、cgbchina.com.cn、czbank.com、cbhb.com.cn、hfbank.com.cn
+#   城商行：bankofbeijing.com.cn、bankofshanghai.com、jsbchina.cn、nbcb.com.cn、hzbank.com.cn、njcb.com.cn、hsbank.com.cn、bocd.com.cn、gzcb.com.cn、cqcbank.com
+#   民营/互联网银行：webank.com、mybank.cn、xwbank.com、suningbank.com（苏商银行，原苏宁银行）
+#   银联：unionpay.com、95516.com（云闪付）
+# 未列入：snbank.com（非苏宁银行官网）、cmbc.com（无法确认归属）、省级农商行/农信（各省域名不同）、外资行；如需补充请告知
+# 注意：pinganlife.com、pinganhealth.com 正在出售中，并非平安所有，未列入
+
+[General]
+skip-proxy = pingan.com,*.pingan.com,pingan.com.cn,*.pingan.com.cn,pingan.cn,*.pingan.cn,pa18.com,*.pa18.com,yqb.com,*.yqb.com,1qianbao.com,*.1qianbao.com,jk.cn,*.jk.cn,ocft.com,*.ocft.com,lu.com,*.lu.com,pajkb.com,*.pajkb.com,palubao.com,*.palubao.com,pingan.com.hk,*.pingan.com.hk,icbc.com.cn,*.icbc.com.cn,ccb.com,*.ccb.com,abchina.com.cn,*.abchina.com.cn,boc.cn,*.boc.cn,bankofchina.com,*.bankofchina.com,bankcomm.com,*.bankcomm.com,psbc.com,*.psbc.com,cmbchina.com,*.cmbchina.com,ecitic.com,*.ecitic.com,cib.com.cn,*.cib.com.cn,spdb.com.cn,*.spdb.com.cn,cmbc.com.cn,*.cmbc.com.cn,cebbank.com,*.cebbank.com,hxb.com.cn,*.hxb.com.cn,cgbchina.com.cn,*.cgbchina.com.cn,czbank.com,*.czbank.com,cbhb.com.cn,*.cbhb.com.cn,hfbank.com.cn,*.hfbank.com.cn,bankofbeijing.com.cn,*.bankofbeijing.com.cn,bankofshanghai.com,*.bankofshanghai.com,jsbchina.cn,*.jsbchina.cn,nbcb.com.cn,*.nbcb.com.cn,hzbank.com.cn,*.hzbank.com.cn,njcb.com.cn,*.njcb.com.cn,hsbank.com.cn,*.hsbank.com.cn,bocd.com.cn,*.bocd.com.cn,gzcb.com.cn,*.gzcb.com.cn,cqcbank.com,*.cqcbank.com,webank.com,*.webank.com,mybank.cn,*.mybank.cn,xwbank.com,*.xwbank.com,suningbank.com,*.suningbank.com,unionpay.com,*.unionpay.com,95516.com,*.95516.com
+bypass-tun = pingan.com,*.pingan.com,pingan.com.cn,*.pingan.com.cn,pingan.cn,*.pingan.cn,pa18.com,*.pa18.com,yqb.com,*.yqb.com,1qianbao.com,*.1qianbao.com,jk.cn,*.jk.cn,ocft.com,*.ocft.com,lu.com,*.lu.com,pajkb.com,*.pajkb.com,palubao.com,*.palubao.com,pingan.com.hk,*.pingan.com.hk,icbc.com.cn,*.icbc.com.cn,ccb.com,*.ccb.com,abchina.com.cn,*.abchina.com.cn,boc.cn,*.boc.cn,bankofchina.com,*.bankofchina.com,bankcomm.com,*.bankcomm.com,psbc.com,*.psbc.com,cmbchina.com,*.cmbchina.com,ecitic.com,*.ecitic.com,cib.com.cn,*.cib.com.cn,spdb.com.cn,*.spdb.com.cn,cmbc.com.cn,*.cmbc.com.cn,cebbank.com,*.cebbank.com,hxb.com.cn,*.hxb.com.cn,cgbchina.com.cn,*.cgbchina.com.cn,czbank.com,*.czbank.com,cbhb.com.cn,*.cbhb.com.cn,hfbank.com.cn,*.hfbank.com.cn,bankofbeijing.com.cn,*.bankofbeijing.com.cn,bankofshanghai.com,*.bankofshanghai.com,jsbchina.cn,*.jsbchina.cn,nbcb.com.cn,*.nbcb.com.cn,hzbank.com.cn,*.hzbank.com.cn,njcb.com.cn,*.njcb.com.cn,hsbank.com.cn,*.hsbank.com.cn,bocd.com.cn,*.bocd.com.cn,gzcb.com.cn,*.gzcb.com.cn,cqcbank.com,*.cqcbank.com,webank.com,*.webank.com,mybank.cn,*.mybank.cn,xwbank.com,*.xwbank.com,suningbank.com,*.suningbank.com,unionpay.com,*.unionpay.com,95516.com,*.95516.com
