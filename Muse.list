@@ -11,9 +11,12 @@
 #     （DOMAIN-SUFFIX,meta.ai 也覆盖 hatch.meta.ai）
 #   metaaivm.com — Muse 云端虚拟机（hatch.metaaivm.com），证书与 DNS 均属 Meta Platforms
 #   ecto1usercontent.com / meta-agents-apps.workers.dev / metaaiusercontent.com
-#     — Muse App、API 与内容托管（第三方公开资料；Meta 未发布官方域名清单，
-#       如遇 App 内个别功能仍直连，可再补充）
+#     — Muse App、API 与内容托管（第三方公开资料；Meta 未发布官方域名清单）
+#   以下为 Meta 旗下全系域名（Facebook、Instagram、Threads、WhatsApp、
+#   Messenger、Oculus 及 CDN/基础设施），Muse 登录、账号与内容加载都会用到；
+#   如遇 App 内个别功能仍直连，可再补充
 
+# Muse 核心
 DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,agent.meta.ai
 DOMAIN-SUFFIX,meta.ai
@@ -21,3 +24,37 @@ DOMAIN-SUFFIX,metaaivm.com
 DOMAIN-SUFFIX,ecto1usercontent.com
 DOMAIN-SUFFIX,meta-agents-apps.workers.dev
 DOMAIN-SUFFIX,metaaiusercontent.com
+
+# Meta 公司
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,internalfb.com
+
+# Facebook
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fb.watch
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbcdn.com
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,tfbnw.net
+
+# Instagram / Threads
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,ig.me
+DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,threads.com
+
+# WhatsApp / Messenger
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,whatsapp.biz
+DOMAIN-SUFFIX,wa.me
+DOMAIN-SUFFIX,messenger.com
+DOMAIN-SUFFIX,m.me
+
+# Oculus / Quest
+DOMAIN-SUFFIX,oculus.com
+DOMAIN-SUFFIX,oculusvr.com
