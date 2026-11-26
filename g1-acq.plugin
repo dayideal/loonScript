@@ -1,5 +1,5 @@
 #!name=G1 ACQ
-#!desc=v7.5.0（Loon 移植）：被动采集 Google One 原始 SKU，最近 10 次响应 / 本次新增 / 重复诊断；2TB 12 个月优惠测试 g1.2tb.ai.12months_ip_90p + 20TB/30TB 原映射与回退；本机报告与 JSON 导出。原作 crhywun/g1-acq（Shadowrocket 版）。
+#!desc=v7.5.0（Loon 移植，20TB 自定义目标）：被动采集 Google One 原始 SKU，最近 10 次响应 / 本次新增 / 重复诊断；2TB 12 个月优惠测试 g1.2tb.ai.12months_ip_90p；20TB 改为 g1.ios.20tb.m.v2 → com.google.gemini.2tb.ai.m.3month_ip_99p（用户指定）；30TB 保留原映射与回退；本机报告与 JSON 导出。原作 crhywun/g1-acq（Shadowrocket 版）。
 #!author=crhywun（原作）；Loon 移植
 #!system=ios
 
