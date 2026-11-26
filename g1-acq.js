@@ -1,4 +1,4 @@
-/* Google One combined 2TB / 20TB / 30TB mappings. Loon port of g1-acq v7.5.0 (originally for Shadowrocket). */
+/* Google One combined 2TB / 20TB / 30TB mappings. Loon port of g1-acq v7.5.0 (originally for Shadowrocket). Custom 20TB target: g1.ios.20tb.m.v2 -> com.google.gemini.2tb.ai.m.3month_ip_99p (user-specified). */
 "use strict";
 
 (function () {
@@ -7,7 +7,7 @@
   // User-selected 12-month offer ID from the screenshot; store metadata is still unverified.
   var TARGET = "g1.2tb.ai.12months_ip_90p";
   var SKU_MAP = {
-    "g1.ios.20tb.m.v2": "g1.20tb.3months_ip_90p.acq",
+    "g1.ios.20tb.m.v2": "com.google.gemini.2tb.ai.m.3month_ip_99p",
     "g1.ios.30tb.ai.pro.m": "g1.ai.ultra.3months_ip_90p.acq"
   };
   var FALLBACK = {
@@ -124,7 +124,7 @@
 
     var byId = Object.create(null);
     var ids = [];
-    var validId = /^(?:g1\.|com\.google\.one\.)[A-Za-z0-9._-]{1,160}$/;
+    var validId = /^(?:g1\.|com\.google\.one\.|com\.google\.gemini\.)[A-Za-z0-9._-]{1,160}$/;
     var oldRows = Array.isArray(saved.skus) ? saved.skus : [];
     oldRows.slice(0, SCAN_LIMIT).forEach(function (row) {
       if (!row || typeof row.id !== "string" || !validId.test(row.id) || byId[row.id]) return;
@@ -146,7 +146,7 @@
     if (isText) {
       // Decode escaped dots on a discovery copy before rewriting the original body.
       var text = originalBody.replace(/\\u002e|\\x2e|&#0*46;|&#x0*2e;|&period;/gi, ".");
-      var token = /(^|[^A-Za-z0-9._@%-])((?:g1\.|com\.google\.one\.)[A-Za-z0-9._-]+)(?=$|[^A-Za-z0-9._-])/g;
+      var token = /(^|[^A-Za-z0-9._@%-])((?:g1\.|com\.google\.one\.|com\.google\.gemini\.)[A-Za-z0-9._-]+)(?=$|[^A-Za-z0-9._-])/g;
       var match;
       while ((match = token.exec(text)) !== null) {
         var id = match[2];
