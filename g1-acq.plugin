@@ -1,0 +1,15 @@
+#!name=G1 ACQ
+#!desc=v7.5.0（Loon 移植）：被动采集 Google One 原始 SKU，最近 10 次响应 / 本次新增 / 重复诊断；2TB 12 个月优惠测试 g1.2tb.ai.12months_ip_90p + 20TB/30TB 原映射与回退；本机报告与 JSON 导出。原作 crhywun/g1-acq（Shadowrocket 版）。
+#!author=crhywun（原作）；Loon 移植
+#!system=ios
+
+[Rule]
+# 拦截 UDP 443，促使支持回退的 HTTP/3 请求改走 TCP，否则 QUIC 会绕过 MITM，脚本收不到响应。
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT
+
+[Script]
+http-response ^https://one\.google\.com/ script-path=https://raw.githubusercontent.com/dayideal/loonScript/main/g1-acq.js, requires-body=true, timeout=10, tag=G1-ACQ
+http-request ^https://one\.google\.com/g1-sku-report/?(\?.*)?$ script-path=https://raw.githubusercontent.com/dayideal/loonScript/main/g1-sku-report.js, timeout=10, tag=G1-SKU-Report
+
+[Mitm]
+hostname = one.google.com
